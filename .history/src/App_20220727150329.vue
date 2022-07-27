@@ -23,42 +23,15 @@
             placeholder="Message">
           </textarea>
           
-          <input type="submit" value="Send" @submit="sendEmail()">
+          <input type="submit" value="Send">
         </form>
     </div>
 </template>
 
 <script>
-import emailjs from 'emailjs-com';
 
 export default {
   name: 'App',
-  data() {
-    return {
-      name: '',
-      email: '',
-      message: ''
-    }
-  },
-  methods: {
-    sendEmail(e) {
-      try {
-        emailjs.sendForm('service_hcqymp3', 'template_s8a4sxn', e.target,
-        'haYaA-viSAy5dOPHt', {
-          name: this.name,
-          email: this.email,
-          message: this.message
-        })
-
-      } catch(error) {
-          console.log({error})
-      }
-      // Reset form field
-      this.name = ''
-      this.email = ''
-      this.message = ''
-    },
-  }
  
 }
 </script>

@@ -44,7 +44,7 @@ export default {
     sendEmail(e) {
       try {
         emailjs.sendForm('service_hcqymp3', 'template_s8a4sxn', e.target,
-        'haYaA-viSAy5dOPHt', {
+        'YOUR_USER_ID', {
           name: this.name,
           email: this.email,
           message: this.message
